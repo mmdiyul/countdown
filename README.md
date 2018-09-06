@@ -14,5 +14,5 @@ You can set your own date by change the value of `countDownDate` in the director
 assets/js/countdown.js
 ```
 
-### Link Testing
+### Link
 https://mmdiyul.github.io/countdown/
