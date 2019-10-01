@@ -1,5 +1,5 @@
 // Tanggal dan waktu akhir countdown
-var countDownDate = new Date("Nov 10, 2018 00:00:00").getTime();
+var countDownDate = new Date("Nov 10, 2019 00:00:00").getTime();
 
 // Update setiap 1 detik
 var countdownfunction = setInterval(function() {
