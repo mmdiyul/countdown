@@ -1,12 +1,22 @@
 // Tanggal dan waktu akhir countdown
-var countDownDate = new Date("Nov 10, 2019 00:00:00").getTime();
+// var countDownDate = new Date("Nov 10, 2019 00:00:00").getTime();
+// conditional
+var date = new Date();
+var year = date.getFullYear();
+var independentDate = new Date(year+'-08-17 00:00:00');
 
+if (date>independentDate) {
+  var countDownDate = new Date(year+1+'-08-17 00:00:00');
+}else{
+  var countDownDate = date;
+}
+document.getElementById("ke").innerHTML = year-1945;
+// end conditional
 // Update setiap 1 detik
 var countdownfunction = setInterval(function() {
 
     // Ambil tanggal dan waktu sekarang
     var now = new Date().getTime();
-
     // Hitung selisih tanggal dan waktu
     var distance = countDownDate - now;
 
@@ -15,6 +25,7 @@ var countdownfunction = setInterval(function() {
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    console.log(minutes);
 
     // Output hasil ke id
     document.getElementById("countdownDays").innerHTML = days;
